@@ -1,107 +1,139 @@
-/**
-Palette: https://scrimba.com/links/hometown-palette
-RED: #E63946
-LIGHT: #F1FAEE
-AQUA: #A8DADC
-LIGHT BLUE: #457B9D
-DARK BLUE: #1D3557
-
-*/
-
-#hero { background-image: url(/images/Kg-flag.jpg);
-    background-size: cover;
-    height: 310px;
-    background-position: 10px;
-    margin-bottom: 0px; 
-     }
-#hero:hover {background-image:url("/images/Kyrgyzstan.gif");}
-
-h1, h2, h3 {background-color: yellow; 
-padding: 5px, 0px; 
-margin-left: 6px;
-margin-top: 6px;
-width: 170px;
-
-}
-
-h2 {margin-top: 120px;}
-    
-.bold-text { font-weight: bold; }
-
+/* DEFAULT */
 body {
- 
-        margin: 0;
-    text-align: center;
-    
-    }
-
-.activities-section {background: yellow;
-    padding-top: 10px; 
-    padding-bottom: 10px;
-    margin-bottom: 50px; }
-    
-    #title { 
-        display: flex;
-        flex-direction: row; 
-        justify-content: center;
-        margin: 5px auto;
-        margin-left: auto; 
-        margin-right: auto;     
-        padding-bottom: 0px; 
-        border-right: 5px dashed red;
-        border-left: 5px dashed red;
-        border-top: 5px dashed black;
-        border-bottom: 5px dashed black;
-        text-shadow: 5px 5px 5px red;
-        width: 300px;
-        }
-
-.activities {display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    
-    }
-    
-    #title {background: yellow;
-    margin-top: 0px; 
-    text-align: center;
-     }
-
-
-
-.bishkek:hover { background: #0fa3b1;
-font-size: 50px; 
+  margin: 0;
+  text-align: center;
+  /* Google Fonts setup */
+  font-family: "Montserrat", sans-serif;
 }
 
-a { color: black; }
+h1,
+h2,
+h3 {
+  background-color: yellow;
+  padding: 5px, 0px;
+  margin-left: 6px;
+  margin-top: 6px;
+  width: 170px;
+}
 
-p { 
- width:150px; 
-text-align: center;}
+h2 {
+  margin-top: 120px;
+}
+
+a {
+  color: black;
+}
+
+p {
+  width: 150px;
+  text-align: center;
+}
 
 img {
-    margin: 5px 10px;
-    width: 150px;
-    border: 5px solid black;
-    border-radius: 30%; 
-} 
+  margin: 5px 10px;
+  width: 150px;
+  border: 5px solid black;
+  border-radius: 30%;
+}
 
+/* HERO SECTION */
+#hero {
+  background-image: url(/images/Kg-flag.jpg);
+  background-size: cover;
+  height: 310px;
+  background-position: 10px;
+  margin-bottom: 0px;
 
+  /* FLEX - part1 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-#business-card-description {text-align: center; }
-#Luann { border: 5px dotted #f48c06; }
+/* FLEX - part2 */
+#hero h1,
+#hero h2 {
+  margin: 0 40px;
+}
+
+/* lines 18 to 28: Your question
+  Using flex, you can center h1 and h2, but the background hover image doesn't look nice with centered heading
+  */
+
+#hero:hover {
+  background-image: url("/images/Kyrgyzstan.gif");
+}
+
+.bishkek:hover {
+  background: #0fa3b1;
+  font-size: 50px;
+}
+
+/* ACTIVITIES SECTION */
+.activities-section {
+  background: yellow;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  border-right: 5px dashed red;
+  border-left: 5px dashed red;
+  border-top: 5px dashed black;
+  border-bottom: 5px dashed black;
+  text-shadow: 5px 5px 5px red;
+  width: 300px;
+}
+
+.activities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* #title { 
+  background: yellow;
+  margin-top: 0px;
+  text-align: center;
+} */
+
+/* 👆 I commented out #title {}, because it seems it has no effect */
+
+/* GUIDE SECTION */
+
+#Luann {
+  border: 5px dotted #f48c06;
+}
+
+#guide-info-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #guide-info-card {
-    display:flex; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-      border: 5px dashed #0fa3b1;
-    color: #0fa3b1;
-    background: black;
-   font-style: italic;
-    width: 200px;
- 
-text-shadow: 5px 5px 5px #f48c06;}
+  margin: 0 auto;
+  border: 5px dashed #0fa3b1;
+  color: #0fa3b1;
+  background: black;
+  font-style: italic;
+  width: 200px;
+  text-shadow: 5px 5px 5px #f48c06;
+}
 
+#business-card-description {
+  margin: 0 auto;
+}
+
+/* STYLING */
+.bold-text {
+  font-weight: bold;
+}
